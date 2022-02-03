@@ -20,7 +20,6 @@ uint32_t seed = 1;
 int deterministic_food(game_state_t* state) {
   unsigned int x = det_rand(&seed) % state->x_size;
   unsigned int y = det_rand(&seed) % state->y_size;
-  printf("%x %x\n", x, y);
   while (state->board[y][x] != ' ') {
     x = det_rand(&seed) % state->x_size;
     y = det_rand(&seed) % state->y_size;
